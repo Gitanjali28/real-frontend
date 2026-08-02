@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import './App.css';
 
 // ========== FIXED: Use direct connection to backend ==========
-const socket = io("http://localhost:5000", {
+const socket = io("https://realchat-backend-soot.onrender.com", {
   transports: ["websocket", "polling"],
   reconnection: true,
   reconnectionAttempts: 5,
@@ -13,7 +13,7 @@ const socket = io("http://localhost:5000", {
 
 // Create axios instance with direct URL
 const api = axios.create({
-  baseURL: "http://localhost:5000", // Direct connection
+  baseURL: "https://realchat-backend-soot.onrender.com", // Direct connection
   timeout: 30000,
 });
 
